@@ -1,7 +1,8 @@
 import React from 'react';
-import { SafeAreaView, StatusBar, useColorScheme } from 'react-native';
+import { StatusBar, useColorScheme } from 'react-native';
 import { Colors } from 'react-native/Libraries/NewAppScreen';
-import { Home } from './src/screens/Home';
+import RootNavigator from './src/routes';
+import 'react-native-gesture-handler';
 
 function App(): JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
@@ -11,13 +12,13 @@ function App(): JSX.Element {
   };
 
   return (
-    <SafeAreaView>
+    <>
       <StatusBar
         barStyle={isDarkMode ? 'light-content' : 'dark-content'}
         backgroundColor={backgroundStyle.backgroundColor}
       />
-      <Home />
-    </SafeAreaView>
+      <RootNavigator />
+    </>
   );
 }
 

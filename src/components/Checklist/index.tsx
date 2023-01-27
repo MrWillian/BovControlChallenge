@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigation } from '@react-navigation/native';
 
 import {
   Arrow,
@@ -10,6 +11,8 @@ import {
   InfoFooter,
   InfoTitle,
 } from './styles';
+import { NativeStackNavigationProp } from '@react-navigation/native-stack';
+import { HomeStackNavigatorParamList } from '../../routes/types';
 
 export interface ChecklistProps {
   _id: number;
@@ -37,6 +40,9 @@ export interface ChecklistProps {
 }
 
 export function Checklist({ data }: { data: ChecklistProps }) {
+  const navigation =
+    useNavigation<NativeStackNavigationProp<HomeStackNavigatorParamList>>();
+
   const getDate = (date) => {
     return new Date(date).toLocaleDateString('pt-BR');
   };
@@ -62,7 +68,9 @@ export function Checklist({ data }: { data: ChecklistProps }) {
           <InfoTitle>Criado em</InfoTitle>
           <InfoContent>{getDate(data.created_at)}</InfoContent>
         </InfoContainer>
-        <InfoDetailsButton>
+        <InfoDetailsButton
+          onPress={() => navigation.navigate('Details', { _id: data._id })}
+        >
           <Arrow>&gt;</Arrow>
         </InfoDetailsButton>
       </InfoFooter>

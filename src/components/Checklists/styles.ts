@@ -1,6 +1,7 @@
 import styled from 'styled-components/native';
 
 export const Container = styled.View`
+  flex: 10;
   margin-top: 10px;
   width: 90%;
 `;
