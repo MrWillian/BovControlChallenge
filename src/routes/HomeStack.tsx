@@ -12,7 +12,7 @@ const HomeStack = createNativeStackNavigator<HomeStackNavigatorParamList>();
 export default function HomeStackNavigator() {
   return (
     <HomeStack.Navigator
-      initialRouteName="Update"
+      initialRouteName="Home"
       screenOptions={{ headerShown: false }}
     >
       <HomeStack.Screen name="Home" component={Home} />
