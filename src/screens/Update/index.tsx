@@ -1,17 +1,16 @@
 import React from 'react';
 import { ContentContainer } from '../../components/ContentContainer';
-import { CustomCheckBox } from '../../components/CustomCheckBox';
 import { FormButton } from '../../components/FormButton';
 import { FormContainer } from '../../components/FormContainer';
 import { DoubleFieldContainer } from '../../components/FormContainer/styles';
 import { ScreenContainer } from '../../components/ScreenContainer';
 import { TextField } from '../../components/TextField';
 
-export function Register() {
+export function Update() {
   return (
     <ScreenContainer>
       <ContentContainer>
-        <FormContainer title={'Cadastrar'}>
+        <FormContainer title={'Atualizar'}>
           <TextField
             label={'Fazendeiro'}
             placeholder={'Digite o nome do fazendeiro'}
@@ -28,10 +27,6 @@ export function Register() {
             label={'Supervisor'}
             placeholder={'Digite o nome do supervisor'}
           />
-          <TextField
-            label={'Tipo'}
-            placeholder={'Digite o tipo do checklist'}
-          />
           <DoubleFieldContainer>
             <TextField
               label={'Quantidade de leite'}
@@ -42,7 +37,6 @@ export function Register() {
               placeholder={'Digite a quantidade'}
             />
           </DoubleFieldContainer>
-          <CustomCheckBox label={'Teve supervisão neste mês?'} />
           <FormButton label={'Cadastrar'} />
         </FormContainer>
       </ContentContainer>

@@ -1,10 +1,11 @@
 import React from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
+import { HomeStackNavigatorParamList } from './types';
 import { Home } from '../screens/Home';
 import { Details } from '../screens/Details';
-import { HomeStackNavigatorParamList } from './types';
 import { Register } from '../screens/Register';
+import { Update } from '../screens/Update';
 
 const HomeStack = createNativeStackNavigator<HomeStackNavigatorParamList>();
 
@@ -17,6 +18,7 @@ export default function HomeStackNavigator() {
       <HomeStack.Screen name="Home" component={Home} />
       <HomeStack.Screen name="Details" component={Details} />
       <HomeStack.Screen name="Register" component={Register} />
+      <HomeStack.Screen name="Update" component={Update} />
     </HomeStack.Navigator>
   );
 }
