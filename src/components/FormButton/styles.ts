@@ -7,7 +7,7 @@ export const Container = styled.TouchableOpacity`
   padding: 10px;
   background-color: #8b4513;
   border-radius: 5px;
-  elevation: 1;
+  elevation: 5;
 `;
 
 export const Label = styled.Text`
