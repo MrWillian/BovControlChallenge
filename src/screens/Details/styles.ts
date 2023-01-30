@@ -1,30 +1,5 @@
 import styled from 'styled-components/native';
 
-export const Container = styled.View`
-  flex: 1;
-  height: 100%;
-  align-items: center;
-  justify-content: flex-end;
-
-  background-color: #228b22;
-`;
-
-export const Content = styled.View`
-  display: flex;
-  height: 90%;
-  width: 100%;
-  padding: 25px;
-
-  border-top-left-radius: 40px;
-  border-top-right-radius: 40px;
-  background-color: white;
-
-  shadow-color: #000;
-  shadow-offset: 5px 10px;
-  shadow-opacity: 0.8;
-  elevation: 1;
-`;
-
 export const Title = styled.Text`
   font-size: 32px;
   font-weight: bold;

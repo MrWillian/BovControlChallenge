@@ -3,4 +3,5 @@ export type HomeStackNavigatorParamList = {
   Details: {
     _id: number;
   };
+  Register: undefined;
 };
