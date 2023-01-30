@@ -2,15 +2,16 @@ import React from 'react';
 import { ContentContainer } from '../../components/ContentContainer';
 import { CustomCheckBox } from '../../components/CustomCheckBox';
 import { FormButton } from '../../components/FormButton';
+import { FormTitle } from '../../components/FormTitle';
 import { ScreenContainer } from '../../components/ScreenContainer';
 import { TextField } from '../../components/TextField';
-import { DoubleFieldContainer, Form, FormContainer, Title } from './styles';
+import { DoubleFieldContainer, Form, FormContainer } from './styles';
 
 export function Register() {
   return (
     <ScreenContainer>
       <ContentContainer>
-        <Title>Cadastrar</Title>
+        <FormTitle label={'Cadastrar'} />
         <FormContainer>
           <Form>
             <TextField
