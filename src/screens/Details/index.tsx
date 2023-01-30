@@ -1,9 +1,9 @@
 import { RouteProp, useRoute } from '@react-navigation/native';
 import React from 'react';
+import { ContentContainer } from '../../components/ContentContainer';
+import { ScreenContainer } from '../../components/ScreenContainer';
 import { HomeStackNavigatorParamList } from '../../routes/types';
 import {
-  Container,
-  Content,
   CowsHeadLabel,
   CowsInfoContainer,
   CreatedAndUpdatedContainer,
@@ -50,11 +50,13 @@ const data = [
 export function Details() {
   const route = useRoute<RouteProp<HomeStackNavigatorParamList, 'Details'>>();
 
-  console.log(route.params._id);
+  if (route.params?._id) {
+    console.log(route.params._id);
+  }
 
   return (
-    <Container>
-      <Content>
+    <ScreenContainer>
+      <ContentContainer>
         <Title>{data[0].from.name}</Title>
         <FarmerNameLabel>{data[0].farmer.name}</FarmerNameLabel>
         <FarmerCityLabel>{'Cidade: ' + data[0].farmer.city}</FarmerCityLabel>
@@ -107,7 +109,7 @@ export function Details() {
             <HadSupervisionLabel>{'Não teve supervisão!'}</HadSupervisionLabel>
           )}
         </HadSupervisionContainer>
-      </Content>
-    </Container>
+      </ContentContainer>
+    </ScreenContainer>
   );
 }
