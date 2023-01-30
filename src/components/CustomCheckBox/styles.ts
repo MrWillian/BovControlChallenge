@@ -4,7 +4,7 @@ export const CheckBoxContainer = styled.View`
   display: flex;
   align-items: center;
   flex-direction: row;
-  margin: 10px 0px 10px 0px;
+  margin-top: 10px;
 `;
 
 export const Label = styled.Text``;
