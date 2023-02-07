@@ -1,3 +1,3 @@
 ﻿# BovControlChallenge
 
-A better README is comming...
+A better README is comming.
